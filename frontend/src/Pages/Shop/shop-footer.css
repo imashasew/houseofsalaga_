@@ -1,0 +1,52 @@
+/* shop-footer.css */
+
+.shop-footer {
+  background-color: #ffffff;
+  border-top: 1px solid #ccc;
+  padding: 20px 0;
+  width: 100%;
+}
+
+.shop-footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  flex-wrap: wrap; /* Responsive wrap */
+  top: 1758px;
+}
+
+.footer-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+  min-width: 220px;
+  margin: 10px 0;
+}
+
+.feature-icon {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
+
+.feature-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.feature-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+  color: #333;
+}
+
+.feature-description {
+  font-size: 14px;
+  color: #666;
+  margin: 0;
+}

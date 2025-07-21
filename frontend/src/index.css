@@ -1,0 +1,25 @@
+
+
+@font-face {
+  font-family: "wilkysta";
+  src: url("./Assets/fonts/wilkysta.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  text-decoration: none;
+  list-style: none;
+  border: none;
+  outline: none;
+  scroll-behavior: smooth;
+}
+body {
+  min-height: 100vh;
+  background: #f0eadc;
+  width: 100%;
+}

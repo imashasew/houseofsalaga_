@@ -1,0 +1,246 @@
+.new-arrivals-section {
+  background-color: #F0EADC;
+  padding: 60px 20px;
+  font-family: "Playfair Display", serif;
+  box-sizing: border-box;
+}
+
+.new-arrivals-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+
+.new-arrivals-title {
+  font-size: 64px;
+  margin-bottom: 40px;
+  font-family: 'Wilkysta', sans-serif;
+  font-weight: 400;
+}
+
+.new-arrivals-span {
+  color: #555;
+  font-size: 36px;
+  font-family: "Playfair Display", serif;
+}
+
+.products-grid1 {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 30px;
+  box-sizing: border-box;
+}
+
+.product-card1 {
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+  width: 100%;
+  max-width: 100%;
+  height: 411px;
+}
+
+.product-card1:hover {
+  transform: translateY(-5px);
+}
+
+.new-arrivals-product-image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.new-arrivals-product-details {
+  padding: 12px;
+  text-align: center;
+  font-family: 'Wilkysta', sans-serif;
+  font-size: 22px;
+  font-weight: 400;
+}
+
+.new-arrivals-product-name {
+  font-size: 22px;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.new-arrivals-product-meta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+  flex-wrap: wrap;
+}
+
+.new-arrivals-product-price {
+  color: #333;
+}
+
+.new-arrivals-divider {
+  color: #999;
+}
+
+.new-arrivals-product-rating {
+  color: #333;
+}
+
+.new-arrivals-star {
+  color: #f0b429;
+  font-size: 16px;
+}
+
+.new-arrivals-load-more-button {
+  margin-top: 40px;
+  padding: 10px 25px;
+  border: 1px solid #4D1727;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 24px;
+  transition: background-color 0.3s;
+  width: 222px;
+  height: 60px;
+  color: #4D1727;
+  font-weight: 400;
+  font-family: 'Wilkysta', sans-serif;
+}
+
+.new-arrivals-load-more-button:hover {
+  background-color: #eee;
+}
+
+/* === Responsive Adjustments === */
+
+@media (max-width: 1100px) {
+  .products-grid1 {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 25px;
+  }
+
+  .new-arrivals-product-image {
+    height: 280px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .products-grid1 {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 25px;
+  }
+
+  .new-arrivals-product-image {
+    height: 280px;
+  }
+}
+
+@media (max-width: 768px) {
+  .new-arrivals-title {
+    font-size: 36px;
+  }
+
+  .new-arrivals-span {
+    font-size: 24px;
+  }
+
+  .products-grid1 {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 0;
+  }
+
+  .new-arrivals-product-image {
+    height: 280px;
+  }
+
+  .new-arrivals-load-more-button {
+    width: 200px;
+    height: 50px;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 576px) {
+  .new-arrivals-section {
+    padding: 40px 10px;
+  }
+
+  .new-arrivals-title {
+    font-size: 32px;
+    margin-bottom: 30px;
+  }
+
+  .new-arrivals-span {
+    font-size: 20px;
+  }
+
+  .products-grid1 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    padding: 0;
+  }
+
+  .product-card1 {
+    height: auto;
+  }
+
+  .new-arrivals-product-image {
+    height: 260px;
+  }
+
+  .new-arrivals-product-details {
+    padding: 8px;
+  }
+
+  .new-arrivals-product-name {
+    font-size: 15px;
+  }
+
+  .new-arrivals-product-meta {
+    font-size: 13px;
+  }
+
+  .new-arrivals-load-more-button {
+    width: 180px;
+    height: 45px;
+    font-size: 16px;
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 400px) {
+  .products-grid1 {
+    grid-template-columns: 1fr;
+    padding: 0;
+  }
+
+  .new-arrivals-product-image {
+    height: 240px;
+  }
+
+  .new-arrivals-title {
+    font-size: 28px;
+  }
+
+  .new-arrivals-span {
+    font-size: 18px;
+  }
+
+  .new-arrivals-product-name {
+    font-size: 14px;
+  }
+
+  .new-arrivals-product-meta {
+    font-size: 13px;
+  }
+
+  .new-arrivals-load-more-button {
+    width: 160px;
+    height: 40px;
+    font-size: 14px;
+  }
+}

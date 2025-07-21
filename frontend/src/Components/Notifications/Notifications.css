@@ -1,0 +1,27 @@
+.notifications-page {
+  min-height: 60vh;
+  padding: 40px 20px;
+  background-color: #F0EADC;
+  font-family: 'Playfair Display', serif;
+   flex-grow: 1;
+}
+
+.notifications-empty {
+  font-size: 18px;
+  color: #555;
+  margin-top: 20px;
+}
+
+.dashboard-layout {
+  display: flex;
+  min-height: 60vh;
+}
+
+
+
+.notifications-empty {
+  font-size: 18px;
+  color: #555;
+  margin-top: 20px;
+  margin-left: 20px;
+}

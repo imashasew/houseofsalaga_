@@ -1,0 +1,87 @@
+.ratingStars {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  line-height: 1;
+}
+
+.ratingStarsLarge {
+  font-size: 54px;
+  color: #FFC107;
+}
+
+.ratingStarsMedium {
+  font-size: 16px;
+  color: #FFC107;
+}
+
+.starsContainer {
+  display: inline-flex;
+  gap: 2px;
+}
+
+.star {
+  color: #DDD;
+  position: relative;
+}
+
+.full {
+  color: #FFC107;
+}
+
+.half {
+  position: relative;
+  width: 1em;
+  height: 1em;
+  overflow: hidden;
+}
+
+.halfFilled {
+  position: absolute;
+  width: 50%;
+  overflow: hidden;
+  color: #FFC107;
+}
+
+.halfEmpty {
+  position: absolute;
+  width: 100%;
+  color: #DDD;
+}
+
+.reviewCount {
+  font-size: 0.5em;
+  color: #666;
+  margin-left: 6px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .ratingStarsLarge {
+    font-size: 48px;
+  }
+}
+
+@media (max-width: 768px) {
+  .ratingStarsLarge {
+    font-size: 40px;
+  }
+
+  .ratingStarsMedium {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 576px) {
+  .ratingStarsLarge {
+    font-size: 32px;
+  }
+
+  .ratingStars {
+    gap: 4px;
+  }
+
+  .reviewCount {
+    margin-left: 4px;
+  }
+}

@@ -1,0 +1,86 @@
+@font-face {
+  font-family: 'Wilkysta';
+  src: url('../../fonts/wilkysta.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+.breadcrumbs {
+  font-size: 1rem;
+  font-family: 'Wilkysta', sans-serif;
+  color: #6d6d6d;
+  padding: 8px 16px;
+  background: transparent;
+  white-space: nowrap;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  position: relative; /* Default */
+  top: auto;
+  left: auto;
+  z-index: 2000;
+}
+
+.breadcrumbs .sep {
+  margin: 0 6px;
+}
+
+.breadcrumbs span:last-child {
+  font-weight: 600;
+  color: #000;
+}
+
+
+.breadcrumb-link {
+  color: #6d6d6d;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.breadcrumb-link:hover {
+  color: #000;
+  text-decoration: underline;
+}
+
+
+.breadcrumbs a {
+  color: #6C7275;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.breadcrumbs a:hover {
+  color: #000;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .breadcrumbs {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 4px 10px;
+    font-size: 0.875rem;
+    width: calc(100% - 20px);
+  }
+
+  .sidebar {
+    position: relative;
+    padding-top: 40px; /* Offset for breadcrumbs */
+  }
+}
+
+@media (max-width: 480px) {
+  .breadcrumbs {
+    font-size: 0.8rem;
+    top: 6px;
+    left: 6px;
+    padding: 4px 8px;
+    width: calc(100% - 12px);
+  }
+
+  .sidebar {
+    padding-top: 36px;
+  }
+}

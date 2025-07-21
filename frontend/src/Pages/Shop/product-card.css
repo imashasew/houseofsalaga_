@@ -1,0 +1,210 @@
+.product-card {
+  max-width: 200px;
+  max-height: 328px;
+  border: 1px solid #4d1727;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  background: #f0eadc;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+}
+
+.product-image-wrapper {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+
+.product-image-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.product-image {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+
+}
+
+.wishlist-button {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  padding: 8px;
+  background: rgb(241, 230, 230);
+  border-radius: 9999px;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 20;
+}
+
+.wishlist-icon {
+  stroke: #0d0118;
+  fill: none;
+  width: 20px;
+  height: 20px;
+  transition: all 0.3s ease;
+}
+.wishlist-button:hover {
+  background-color: #f7f7f7;
+}
+
+.wishlist-icon.wishlisted {
+  fill: red;
+  stroke: red;
+}
+
+.product-info {
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.product-name h3 {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.product-price .current {
+  color: #000;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.product-rating {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  margin-top: 2px;
+}
+
+.heart-icon {
+  font-size: 14px;
+  color: #ccc;
+}
+
+.heart-icon.filled {
+  color: red;
+}
+
+.review-count {
+  font-size: 12px;
+  color: #666;
+  margin-left: 4px;
+}
+
+.loading-overlay,
+.error-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  font-size: 12px;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.product-rating {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  margin-top: 4px;
+}
+
+.star-icon {
+  width: 14px;
+  height: 16px;
+}
+
+.star-icon.filled {
+  fill: #facc15;
+  color: #facc15;
+}
+
+.star-icon.empty {
+  color: #d1d5db;
+}
+
+.review-count {
+  font-size: 10px;
+  color: #9ca3af;
+}
+.product-description {
+  opacity: 0;
+  transition: opacity 0.3s;
+  font-size: 12px;
+  padding: 4px;
+}
+
+.product-card:hover .product-description {
+  opacity: 1;
+}
+
+/* Animations */
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@media (max-width: 768px) {
+  .product-card {
+    max-width: 100%;
+    padding: 10px;
+  }
+
+  .product-name h3 {
+    font-size: 14px;
+  }
+
+  .product-price .current {
+    font-size: 14px;
+  }
+
+  .review-count {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-card {
+    padding: 8px;
+  }
+
+  .product-name h3 {
+    font-size: 13px;
+  }
+
+  .product-description {
+    font-size: 12px;
+  }
+
+  .product-price .current {
+    font-size: 13px;
+  }
+
+  .wishlist-button {
+    padding: 4px;
+  }
+}

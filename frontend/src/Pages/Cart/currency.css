@@ -1,0 +1,70 @@
+.currency-dropdown {
+  position: relative;
+  width: 160px;
+  font-family: "Playfair Display", serif;
+}
+
+.currency-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f0eadc;
+  padding: 8px;
+  cursor: default;
+  width: 100px;
+}
+
+.currency-label {
+  color: #374151;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: playfair Display;
+}
+
+.dropdown-icon {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.dropdown-icon.rotated {
+  transform: rotate(180deg);
+}
+
+.currency-list {
+  position: absolute;
+  top: 100%;
+  margin-top: 8px;
+  width: 100%;
+  background-color: #f0eadc;
+  border: 1px solid #f0eadc;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  overflow: hidden;
+}
+
+.currency-item {
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.currency-item:hover {
+  background-color: #f3f4f6; /* light gray */
+}
+@media (max-width: 480px) {
+  .currency-dropdown {
+    width: 100%;
+  }
+
+  .currency-label {
+    font-size: 16px;
+  }
+
+  .dropdown-icon {
+    width: 20px;
+    height: 20px;
+  }
+}

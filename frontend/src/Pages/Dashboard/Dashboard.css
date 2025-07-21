@@ -1,0 +1,249 @@
+@font-face {
+  font-family: 'wilkysta';
+  src: url('../../fonts/wilkysta.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+.dashboard {
+  display: flex;
+  background-color: #F0EADC;
+}
+
+/* Main content flex-grow */
+.main-content {
+  flex: 1;
+  margin: 0 110px;
+  padding: 32px;
+}
+
+/* ========== Orders Header: flex row, no wrap, center vertically ========== */
+.orders-headers {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Spread items left and right */
+  font-family: 'Wilkysta';
+  font-size: 20px;
+  margin: 15px 0 20px;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+}
+
+
+
+
+/* Make sure heading doesn't shrink */
+.orders-headers h2 {
+  flex-shrink: 0;
+}
+
+/* Container for search and filter: move to right */
+.search-filter {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  min-width: 0;
+  flex: 0 1 auto;
+  margin-left: auto; /* 👈 Push it to the far right */
+}
+
+/* Search input container grows to fill */
+.search-wrapper {
+  position: relative;
+  flex-grow: 1;    /* Search bar expands */
+  min-width: 150px;
+  max-width: 400px; /* Optional max width */
+  height: 35px;
+}
+
+/* Input fills wrapper width */
+.search-wrapper input {
+  width: 100%;
+  padding: 8px 14px 8px 36px;
+  border: 1px solid #A4A1AA33;
+  border-radius: 4px;
+  background: #F0EADC;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+.search-wrapper input::placeholder {
+  color: #999;
+}
+
+/* Search icon positioned inside input */
+.search-icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+/* Filter button fixed width, no shrink */
+.filter-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 18px 8px 28px;
+  background: #000;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 500;
+  width: 120px;
+  cursor: pointer;
+  flex-shrink: 0; /* Prevent shrinking */
+}
+
+/* ========== Responsive Breakpoints ========== */
+
+/* Tablets and below: keep horizontal layout but reduce margins */
+@media (max-width: 1024px) {
+  .dashboard {
+    flex-direction: column;
+    padding: 24px;
+  }
+
+  .main-content {
+    margin: 0;
+    padding: 24px;
+  }
+}
+
+/* Medium Mobiles and below: keep single line, no stacking */
+@media (max-width: 768px) {
+  .orders-headers {
+    flex-direction: column;      /* Stack items vertically */
+    align-items: center;         /* Center horizontally */
+    gap: 12px;                   /* Space between stacked items */
+    text-align: center;          /* Optional: center text in h2 */
+  }
+
+  .search-filter {
+    flex-direction: column;      /* Stack search and filter vertically */
+    align-items: center;         /* Center horizontally */
+    width: 100%;
+    gap: 12px;
+  }
+
+  .search-wrapper {
+    width: 90%;                 /* Expand input width */
+    max-width: 400px;
+  }
+
+  .filter-btn {
+    width: 150px;
+  }
+
+  .main-content {
+    padding: 16px;
+  }
+}
+
+
+/* Small Mobiles (≤480px): allow horizontal scroll if needed */
+@media (max-width: 480px) {
+  .dashboard {
+    padding: 16px;
+  }
+
+  .orders-headers {
+    font-size: 18px;
+    overflow-x: auto; /* Allow horizontal scroll to avoid wrapping */
+  }
+
+  .filter-btn {
+    font-size: 14px;
+    padding: 10px 16px;
+  }
+
+  .search-wrapper {
+    min-width: 120px; /* Smaller min width */
+  }
+}
+
+/* ========== Filter dropdown styles ========== */
+
+.filter-container {
+  position: relative;
+}
+
+.filter-dropdown {
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 12px;
+  position: absolute;
+  z-index: 10;
+  top: 100%;
+  right: 0;
+  width: 220px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.filter-dropdown div {
+  padding: 10px 12px;
+  cursor: pointer;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  color: #000;
+}
+
+.filter-dropdown div:hover {
+  background-color: #f7f7f7;
+}
+
+.dropdown-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  margin-bottom: 8px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.filter-option {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 4px;
+  cursor: pointer;
+  transition: background 0.2s;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.filter-option:hover {
+  background: #f4f4f4;
+  border-radius: 4px;
+}
+
+.icon-text {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #000;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

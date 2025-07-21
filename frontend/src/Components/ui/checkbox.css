@@ -1,0 +1,35 @@
+.checkbox-base {
+    display: flex;
+    height: 1rem;
+    width: 1rem;
+    flex-shrink: 0;
+    border-radius: 0.125rem;
+    border: 1px solid currentColor;
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+}
+
+.checkbox-base:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 2px;
+}
+
+.checkbox-base:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+.checkbox-checked {
+    background-color: #1a202c;
+    color: #ffffff;
+}
+
+.checkbox-unchecked {
+    background-color: #ffffff;
+}
+
+.checkbox-icon {
+    height: 0.75rem;
+    width: 0.75rem;
+    color: #ffffff;
+}
